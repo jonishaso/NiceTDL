@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import VisibableTodoList from './visibaleTodoList'
-import VisibableAddForm from './visibaleAddForm'
-import VisibableFilters from './visibaleFilter'
+import VisibableTodoList from './visibale-todo-list'
+import VisibableAddForm from './visibale-add-form'
+import VisibableFilters from './visibale-filter'
 import { fetchData_action } from '../actions'
 import logo from '../logo.svg';
 import '../style/header.css'

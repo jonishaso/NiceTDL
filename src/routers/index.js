@@ -1,8 +1,8 @@
 import React from 'react';
 import {Router,Route,browserHistory} from 'react-router';
-import AppTodoList from '../containers/AppTodoList' ;
-import AppHome from '../containers/AppHome';
-import GameApp from '../containers/AppGame'
+import AppTodoList from '../containers/app-todo-list' ;
+import AppHome from '../containers/app-home';
+import GameApp from '../containers/app-game'
 
 
 const Root = () => (
