@@ -7,9 +7,9 @@ import GameApp from '../containers/app-game'
 
 const Root = () => (
     <Router history={browserHistory}>
-      <Route path="/home" component={AppHome} />
-      <Route path="/list" component={AppTodoList} />
-      <Route path="/game" component={GameApp} />
+      <Route path="/nice-tdl/home" component={AppHome} />
+      <Route path="/nice-tdl/list" component={AppTodoList} />
+      <Route path="/nice-tdl/game" component={GameApp} />
     </Router>
 );
 

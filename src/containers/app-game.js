@@ -112,7 +112,7 @@ class GameApp extends Component {
       <div className="container-fluid" style={{ background: "#222" }}>
         <div className="row">
           <p className="lead col-sm-5 my-1 offset-sm-3 " style={{ color: "white" }}>
-            Try to catch the Green BoX, if the Box turn to organge, means you got it.
+            Try to catch the Green BoX through keyboard, if the Box turn to organge, means you got it.
           </p>
         </div>
         <div className="row">
