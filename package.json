@@ -2,7 +2,7 @@
   "name": "nice-tdl",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jonishaso.github.io/nice-tdl",
+  "homepage": "https://jonishaso.github.io/",
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.5.10",
