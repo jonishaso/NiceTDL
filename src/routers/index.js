@@ -13,5 +13,4 @@ const Root = () => (
     </Router>
 );
 
-
 export default Root;
