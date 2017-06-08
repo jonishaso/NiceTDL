@@ -19,5 +19,5 @@ See the section about [deployment](#deployment) for more information.
 
 ![Game Page](https://github.com/jonishaso/nice-tdl/blob/master/public/Game.png)
 
-![list page](https://github.com/jonishaso/nice-tdl/blob/master/public/list.png)
+![list page](https://github.com/jonishaso/nice-tdl/blob/master/public/List.png)
 
