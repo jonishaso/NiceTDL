@@ -28,12 +28,14 @@ class AddForm extends Component {
     return (
       <div className="jumbotron container-fluid">
         <div className="row">
-          <h1 className="display-3 col-sm-3">Hello, world!</h1>
+          <h1 className="display-2 col-sm-3">Hello, world!</h1>
           <p className="lead col-sm-9">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         </div>
         <hr className="my-4" />
         <div className="row">
-          <p className="lead col-sm-3">It uses utility classNamees for typography and spacing to space content out within the larger container.</p>
+          <p className="lead col-sm-3">
+            This page enable to add todo in the input form on left, and is able to filter todos by click ALL, COMPELTED, and ACTIVE below, removing a todo by click the cross in the list, and click one todo for marking it complelted status.
+          </p>
           <div className="col-sm-9">
             <form
               className="form-inline row"

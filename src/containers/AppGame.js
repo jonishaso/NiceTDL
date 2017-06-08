@@ -24,10 +24,10 @@ class GameApp extends Component {
   constructor() {
     super();
     this.state = {
-      X: 0,
-      Y: 0,
-      a: Math.floor(Math.random() * 3),
-      b: Math.floor(Math.random() * 3),
+      x: 0,
+      y: 0,
+      a: Math.floor(Math.random() * 4),
+      b: Math.floor(Math.random() * 4),
     }
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
@@ -42,59 +42,59 @@ class GameApp extends Component {
   handleKeyPress() {
     switch (window.event.keyCode) {
       case 37: {
-        if (this.state.Y !== 0) {
-          if ((this.state.Y - 1) === this.state.b && (this.state.X) === this.state.a) {
+        if (this.state.y !== 0) {
+          if ((this.state.y - 1) === this.state.b && (this.state.x) === this.state.a) {
             this.setState({
-              Y: (this.state.Y - 1),
-              a: Math.floor(Math.random() * 3),
-              b: Math.floor(Math.random() * 3),
+              x: (this.state.y - 1),
+              a: Math.floor(Math.random() * 4),
+              b: Math.floor(Math.random() * 4),
             })
           }
           else
-            this.setState({ Y: (this.state.Y - 1) })
+            this.setState({ y: (this.state.y - 1) })
         }
         break;
       }
       case 38: {
-        if (this.state.X !== 0) {
-          if ((this.state.X - 1) === this.state.a && (this.state.Y) === this.state.b) {
+        if (this.state.x !== 0) {
+          if ((this.state.x - 1) === this.state.a && (this.state.y) === this.state.b) {
             this.setState({
-              X: (this.state.X - 1),
-              a: Math.floor(Math.random() * 3),
-              b: Math.floor(Math.random() * 3),
+              x: (this.state.x - 1),
+              a: Math.floor(Math.random() * 4),
+              b: Math.floor(Math.random() * 4),
             })
           }
           else
-            this.setState({ X: (this.state.X - 1) })
+            this.setState({ x: (this.state.x - 1) })
         }
 
         break;
       }
       case 39: {
-        if (this.state.Y !== 3) {
-          if ((this.state.Y + 1) === this.state.b && (this.state.X) === this.state.a) {
+        if (this.state.y !== 4) {
+          if ((this.state.y + 1) === this.state.b && (this.state.x) === this.state.a) {
             this.setState({
-              Y: (this.state.Y + 1),
-              a: Math.floor(Math.random() * 3),
-              b: Math.floor(Math.random() * 3),
+              x: (this.state.y + 1),
+              a: Math.floor(Math.random() * 4),
+              b: Math.floor(Math.random() * 4),
             })
           }
           else
-            this.setState({ Y: (this.state.Y + 1) })
+            this.setState({ y: (this.state.y + 1) })
         }
         break;
       }
       case 40: {
-        if (this.state.X !== 3) {
-          if ((this.state.X + 1) === this.state.a && (this.state.Y) === this.state.b) {
+        if (this.state.x !== 4) {
+          if ((this.state.x + 1) === this.state.a && (this.state.y) === this.state.b) {
             this.setState({
-              X: (this.state.X + 1),
-              a: Math.floor(Math.random() * 3),
-              b: Math.floor(Math.random() * 3),
+              x: (this.state.x + 1),
+              a: Math.floor(Math.random() * 4),
+              b: Math.floor(Math.random() * 4),
             })
           }
           else
-            this.setState({ X: (this.state.X + 1) })
+            this.setState({ x: (this.state.x + 1) })
         }
         break;
       }
@@ -106,13 +106,13 @@ class GameApp extends Component {
 
 
   render() {
-    let currentPosition = this.state.X.toString() + '-' + this.state.Y.toString();
+    let currentPosition = this.state.x.toString() + '-' + this.state.y.toString();
     let randomPositio = this.state.a.toString() + '-' + this.state.b.toString();
     return (
       <div className="container-fluid" style={{ background: "#222" }}>
         <div className="row">
           <p className="lead col-sm-5 my-1 offset-sm-3 " style={{ color: "white" }}>
-            Try to catch the Green BoX through keyboard, if the Box turn to organge, means you got it.
+            Try to catch the Green Box, if the Box turn to organge, means you got it.
           </p>
         </div>
         <div className="row">
@@ -121,6 +121,7 @@ class GameApp extends Component {
             <div className="grid-cell" style={sytleShow('0-1', randomPositio, currentPosition)} />
             <div className="grid-cell" style={sytleShow('0-2', randomPositio, currentPosition)} />
             <div className="grid-cell" style={sytleShow('0-3', randomPositio, currentPosition)} />
+            <div className="grid-cell" style={sytleShow('0-4', randomPositio, currentPosition)} />
           </div>
         </div>
         <div className="row">
@@ -129,6 +130,7 @@ class GameApp extends Component {
             <div className="grid-cell" style={sytleShow('1-1', randomPositio, currentPosition)} />
             <div className="grid-cell" style={sytleShow('1-2', randomPositio, currentPosition)} />
             <div className="grid-cell" style={sytleShow('1-3', randomPositio, currentPosition)} />
+            <div className="grid-cell" style={sytleShow('1-4', randomPositio, currentPosition)} />
           </div>
         </div>
         <div className="row">
@@ -137,14 +139,25 @@ class GameApp extends Component {
             <div className="grid-cell" style={sytleShow('2-1', randomPositio, currentPosition)} />
             <div className="grid-cell" style={sytleShow('2-2', randomPositio, currentPosition)} />
             <div className="grid-cell" style={sytleShow('2-3', randomPositio, currentPosition)} />
+            <div className="grid-cell" style={sytleShow('2-4', randomPositio, currentPosition)} />
           </div>
         </div>
         <div className="row">
-          <div className="col-sm-7 offset-sm-3 mb-5 mt-1">
+          <div className="col-sm-7 offset-sm-3 my-2">
             <div className="grid-cell" style={sytleShow('3-0', randomPositio, currentPosition)} />
             <div className="grid-cell" style={sytleShow('3-1', randomPositio, currentPosition)} />
             <div className="grid-cell" style={sytleShow('3-2', randomPositio, currentPosition)} />
             <div className="grid-cell" style={sytleShow('3-3', randomPositio, currentPosition)} />
+            <div className="grid-cell" style={sytleShow('3-4', randomPositio, currentPosition)} />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-7 offset-sm-3 mb-5 mt-1">
+            <div className="grid-cell" style={sytleShow('4-0', randomPositio, currentPosition)} />
+            <div className="grid-cell" style={sytleShow('4-1', randomPositio, currentPosition)} />
+            <div className="grid-cell" style={sytleShow('4-2', randomPositio, currentPosition)} />
+            <div className="grid-cell" style={sytleShow('4-3', randomPositio, currentPosition)} />
+            <div className="grid-cell" style={sytleShow('4-4', randomPositio, currentPosition)} />
           </div>
         </div>
       </div>
