@@ -17,5 +17,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
 
-![](./public/Game.pnd)
+![Game Page](https://github.com/jonishaso/nice-tdl/blob/master/public/Game.png)
+
+![list page](https://github.com/jonishaso/nice-tdl/blob/master/public/list.png)
 
