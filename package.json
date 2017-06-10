@@ -4,7 +4,7 @@
   "homepage": "https://jonishaso.github.io/nice-tdl/",
   "private": true,
   "dependencies": {
-    "bootstrap": "4.0.0al",
+    "bootstrap": "4",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
