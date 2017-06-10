@@ -4,14 +4,14 @@ var NavList = () => {
   return (
     <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
       <ul className="navbar-nav">
-        {/*<li className="nav-item">
-          <a className="nav-link" href="/home">Home</a>
-        </li>*/}
         <li className="nav-item">
-          <a className="nav-link" href="/list">Todo List</a>
+          <a className="nav-link" href="/nice-tdl/home">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/game">Game</a>
+          <a className="nav-link" href="/nice-tdl/list">Todo List</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/nice-tdl/game">Game</a>
         </li>
       </ul>
     </nav>)
