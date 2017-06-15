@@ -1,9 +1,12 @@
-import React, {Component}from 'react';
+import React, { Component } from 'react';
 
 
 class AppHome extends Component {
-  render(){
-    return (<h1 children={'this is home page'}/>)
+  render() {
+    return (
+      <div className="container-fluid">
+        <h1 className="row" children={'this is home page'} />
+      </div>)
   }
 }
 

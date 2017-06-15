@@ -1,22 +1,19 @@
 import Proptypes from 'prop-types';
 import React from 'react';
 
-const Todo = ({ index, todo, deleteTodo, toggleTodo }) => {
-  let classNameString_pre = "list-group-item justify-content-between list-group-item-action";
-  let classNameString_append = todo.completed ? 'list-group-item-info' : 'list-group-item-success';
-  let classNameString = classNameString_pre.concat(' ', classNameString_append);
-  return (
 
-    <div className="text-left" onClick={toggleTodo}>
-      <li
-        className={classNameString}
-      >
+const Todo = ({ index, todo, deleteTodo, toggleTodo }) => {
+  let uncompletedString = "container list-group-item list-group-item-action border-0  mb-2";
+  let completedString = "container list-group-item list-group-item-action border-0 mb-2 list-group-item-success";
+
+  return (
+    <li className={todo.completed ? completedString : uncompletedString}>
+      <input type="checkbox" checked={todo.completed ? 'checked' : ''} onClick={toggleTodo} />
+      <h6><span className="badge badge-default badge-pill  badge-danger mr-5 ml-3" onClick={deleteTodo}>&times;</span></h6>
+      <div className="text-left font-italic lead">
         {todo.text}
-        <button type="button" className="close" aria-label="Close">
-          <span aria-hidden="true" onClick={deleteTodo}>&times;</span>
-        </button>
-      </li>
-    </div>
+      </div>
+    </li>
   )
 }
 

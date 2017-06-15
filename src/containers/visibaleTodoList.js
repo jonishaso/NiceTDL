@@ -36,7 +36,7 @@ class VisibableTodoList extends Component {
     let Pages = Math.ceil(this.props.todoList.length / TODOS_PERPAGE);
     
     return (
-      <div className="col-sm-12">
+      <div>
         <TodoList
           todoList={getListOnPage(todoList, this.state.currentPage)}
           realIndex={(this.state.currentPage - 1) * TODOS_PERPAGE}

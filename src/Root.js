@@ -1,22 +1,24 @@
 import React from 'react';
-import { Router, Route, browserHistory, IndexRoute} from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import AppTodoList from './containers/AppTodoList';
 import AppHome from './containers/AppHome';
-import GameApp from './containers/AppGame'
-import Layout from './containers/AppLayout'
+import GameApp from './containers/AppGame';
+import Header from './components/header';
+import Footer from './components/footer'
 
 
 const Root = () => (
-  <Router history={browserHistory}>
-    <Route path='/' component={Layout} children={AppHome}/>    
-    <Route path='nice-tdl' component={Layout}>
-      <IndexRoute component={AppHome}/>
-      <Route path="home" component={AppHome} />
-      <Route path="list" component={AppTodoList} />
-      <Route path="game" component={GameApp} />
-    </Route>
-  </Router>
+  <BrowserRouter>
+    <div>
+      <Route component={Header}/>
+      <Switch>
+          <Route path="/nice-tdl/home" component={AppHome} />
+          <Route path="/nice-tdl/list" component={AppTodoList} />
+          <Route path="/nice-tdl/game" component={GameApp} />
+      </Switch>
+      <Route component={Footer}/>
+    </div>
+  </BrowserRouter>
 );
-
 
 export default Root;

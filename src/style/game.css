@@ -1,9 +1,3 @@
-.grid-container {
-  position: absolute;
-  /*z-index: 1;*/
-  background: #0c1a1e;
-   }
-
   .grid-row:after {
     content: "";
     display: block;
